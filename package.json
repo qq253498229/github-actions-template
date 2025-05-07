@@ -1,7 +1,8 @@
 {
   "name": "github-actions-template",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/lib.js",
+  "types": "lib/lib.d.ts",
   "scripts": {
     "build": "tsc --declaration",
     "test": "echo \"Error: no test specified\" && exit 1"
