@@ -13,11 +13,12 @@ jobs:
         uses: qq253498229/github-actions-template@v1.4
         with:
           who-to-greet: 'Mona the Octocat'
+      - run: zip dist
       - if: github.ref_type == 'tag'
         name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/**/*
+          files: dist.zip
           draft: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
