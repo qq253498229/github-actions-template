@@ -15,7 +15,7 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       - run: |
           pwd
-          la -al
+          ls -al
           zip -r dist.zip dist
       - if: github.ref_type == 'tag'
         name: Release
