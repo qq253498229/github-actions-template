@@ -13,6 +13,13 @@ jobs:
         uses: qq253498229/github-actions-template@v1.4
         with:
           who-to-greet: 'Mona the Octocat'
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+      - name: build
+        run: |
+          npm ci
+          npm run build
       - run: |
           pwd
           ls -al
